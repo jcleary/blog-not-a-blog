@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  timeout: 5000
+  host: db
+  database: 'blognotablog'
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: 'blognotablog_test'
+
+production:
+  <<: *default

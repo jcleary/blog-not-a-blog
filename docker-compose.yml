@@ -1,0 +1,16 @@
+version: '2'
+services:
+  web:
+    image: ruby:2.4
+    links:
+      - db
+    volumes:
+      - .:/app
+    command: bash -c 'cd /app && rm -f tmp/pids/server.pid && bundle && bundle exec rails server -b 0.0.0.0'
+    ports:
+      - 3000:3000
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+     
