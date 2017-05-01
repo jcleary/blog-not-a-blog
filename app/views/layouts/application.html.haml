@@ -17,5 +17,8 @@
           %a.navbar-brand{:href => "#"} Blog, Not A Blog
         #navbar.navbar-collapse.collapse
           .navbar-form.navbar-right
-            %button.btn.btn-success{type: "submit"} Sign in with GitHub
+            -if user_signed_in?
+              = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-success'
+            -else
+              = link_to 'Sign in with GitHub', user_github_omniauth_authorize_path, class: 'btn btn-success'
     = yield
