@@ -1,4 +1,6 @@
 .container
   .row
     .md-col-12
-      %h3 Your Artifacts
+      %h3 Artifacts
+      %p You don't have any artifacts yet.
+      = link_to 'Create an Artifact', new_user_artifact_path(current_user), class: 'btn btn-primary'

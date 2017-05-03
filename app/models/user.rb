@@ -11,7 +11,13 @@ class User < ApplicationRecord
       # user.image = auth.info.image # assuming the user model has an image
     end
   end
+   
+  def to_param
+    username
+  end
 
   has_many :collections, dependent: :destroy
   has_many :artifacts, dependent: :destroy
+
+  validates :username, presence: true
 end
