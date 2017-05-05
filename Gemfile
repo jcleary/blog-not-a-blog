@@ -22,7 +22,8 @@ gem 'devise'
 gem 'omniauth-github'
 gem 'cancancan' 
 gem 'figaro'
-
+gem 'ckeditor'
+ 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'

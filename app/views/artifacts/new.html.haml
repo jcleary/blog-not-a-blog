@@ -3,5 +3,8 @@
     %h3 Create Artifact
     = bootstrap_form_for [:user, @artifact] do |f|
       = f.text_field :name
-      = f.text_area :content
+      = f.cktext_area :content
       = f.submit 'Save'
+
+
+
