@@ -1,0 +1,17 @@
+.container
+  .row
+    .col-md-12
+      %h1 Artifacts
+
+  .row
+    - @artifacts.each do |artifact| 
+      .col-md-4
+        .well.well-sm.artifact-thumb
+          %h4= artifact.name
+          %hr
+          %p Collections: 3
+          %p 
+            Tags: 
+            %span.label.label-info rails-5
+            %span.label.label-info ruby
+
