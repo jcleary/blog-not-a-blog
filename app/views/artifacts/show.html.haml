@@ -1,0 +1,9 @@
+= render partial: '/users/banner', locals: { user: @artifact.user }
+.container.artifact
+  .row
+    .col-md-12
+      %h1= @artifact.name
+  .row
+    .col-md-12
+      =@artifact.content.html_safe
+

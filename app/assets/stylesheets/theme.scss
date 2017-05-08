@@ -6,3 +6,24 @@ body {
 .home-jumbo {
   background-image: url('/assets/notebook.png');
 }
+
+.user-banner {
+
+  background-color: #f5f5f5; 
+  padding-top: 12px;
+  padding-bottom: 6px;
+
+  .curator {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .curator-name {
+  }
+}
+
+.artifact {
+  h1 {
+    text-align: center;
+  }
+}
+

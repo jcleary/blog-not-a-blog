@@ -1,5 +1,7 @@
 class ArtifactsController < ApplicationController
 
+  before_action :find_artifact, only: [:show, :edit, :update]
+
   def index
     @artifacts = current_user.artifacts
   end
@@ -14,12 +16,13 @@ class ArtifactsController < ApplicationController
     redirect_to action: :index
   end 
 
+  def show
+  end
+
   def edit
-    @artifact = current_user.artifacts.find_by!(slug: params[:slug])
   end
 
   def update
-    @artifact = current_user.artifacts.find_by!(slug: params[:slug])
     @artifact.update!(artifact_params)
     flash[:notice] = 'Artifact updated.'
     redirect_to action: :index
@@ -29,6 +32,10 @@ class ArtifactsController < ApplicationController
   end
 
   private
+
+  def find_artifact
+    @artifact = current_user.artifacts.find_by!(slug: params[:slug])
+  end
   
   def artifact_params
     params.require(:artifact).permit(:name, :content)

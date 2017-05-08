@@ -1,4 +1,5 @@
 = bootstrap_form_for [:user, @artifact] do |f|
   = f.text_field :name
   = f.cktext_area :content
-  = f.submit 'Save', class: 'btn btn-primary'
+  %br
+  = f.submit 'Save Artifact', class: 'btn btn-primary pull-right'
