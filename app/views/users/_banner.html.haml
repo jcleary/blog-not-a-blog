@@ -3,9 +3,9 @@
     .row
       .col-md-6
         .curator curator
-        .curator-name= link_to user.name, user_path(user)
+        .curator-name= link_to user.name, short_user_path(user)
       .col-md-6
         .links.pull-right
-          = link_to 'Artifacts', user_artifacts_path(user)
-          = link_to 'Collections', user_collections_path(user)
-          = link_to 'Topics', '#'
+          = link_to 'Artifacts', short_user_artifacts_path(user)
+          = link_to 'Collections', short_user_collections_path(user)
+          = link_to 'Topics', short_user_tags_path(user)
