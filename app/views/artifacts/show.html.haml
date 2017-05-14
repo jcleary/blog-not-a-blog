@@ -5,5 +5,12 @@
       %h1= @artifact.name
   .row
     .col-md-12
-      =@artifact.content.html_safe
+      %h2
+        = link_to @artifact.user.name, short_user_path(@artifact.user)
+        = '-'
+        = @artifact.created_at.strftime('%B %Y')
+.container
+  .row
+    .col-md-12
+      != @artifact.content
 
