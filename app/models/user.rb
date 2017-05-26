@@ -11,6 +11,8 @@ class User < ApplicationRecord
       # user.image = auth.info.image # assuming the user model has an image
     end
   end
+
+  after_initialize :default_values
    
   def to_param
     username
@@ -18,5 +20,11 @@ class User < ApplicationRecord
 
   has_many :collections, dependent: :destroy
   has_many :artifacts, dependent: :destroy
+
+  validates :username, presence: true
+
+  def default_values
+    self.username ||= rand(36**12).to_s(36)
+  end
 
 end
