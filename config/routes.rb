@@ -12,11 +12,11 @@ Rails.application.routes.draw do
   #  - /username/artifact-slug
   #  - /username/collections/collection-slug
   #  - /username/tags/tag
-  get '*username/tags', to: 'tags#index', as: 'short_user_tags'
-  get '*username/tags/*tag', to: 'tags#show', as: 'short_user_tag'
-  get '*username/collections', to: 'collections#index', as: 'short_user_collections'
-  get '*username/collections/*slug', to: 'collections#show', as: 'short_user_collection'
-  get '*username/artifacts', to: 'artifacts#index', as: 'short_user_artifacts'
-  get '*username/*slug', to: 'artifacts#show', as: 'short_user_artifact'
+  get '*user_username/tags', to: 'tags#index', as: 'short_user_tags'
+  get '*user_username/tags/*tag', to: 'tags#show', as: 'short_user_tag'
+  get '*user_username/collections', to: 'collections#index', as: 'short_user_collections'
+  get '*user_username/collections/*slug', to: 'collections#show', as: 'short_user_collection'
+  get '*user_username/artifacts', to: 'artifacts#index', as: 'short_user_artifacts'
+  get '*user_username/*slug', to: 'artifacts#show', as: 'short_user_artifact'
   get '*username', to: 'users#show', as: 'short_user' 
 end

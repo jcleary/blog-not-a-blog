@@ -3,7 +3,7 @@
     .panel-heading Artifacts
     .panel-body 
       %p Artifacts are single-page blogs which can be notes, crib sheets, sketch-notes or whatever you like - just keep 'me short, got it?
-      .btn.btn-primary.pull-right Create Artifact
+      = link_to 'Create Artifact', new_user_artifact_path(current_user), class: 'btn btn-primary pull-right'
 .col-md-6
   .panel.panel-default
     .panel-heading Collections

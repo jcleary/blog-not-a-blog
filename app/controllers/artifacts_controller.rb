@@ -35,7 +35,7 @@ class ArtifactsController < ApplicationController
   private
 
   def find_user
-    @user = User.find_by!(username: params[:username])
+    @user = User.find_by!(username: params[:user_username])
   end
   
   def find_artifact
