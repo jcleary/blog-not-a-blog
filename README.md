@@ -1,24 +1,7 @@
-# README
+# Blog, Not A Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A meso-blogging platform. Capture and share notes, ideas, sketch-notes and more, in single-page sized posts.
+Curate and share collections of artifacts from your own or other users
+ 
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
