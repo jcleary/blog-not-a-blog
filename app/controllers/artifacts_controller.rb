@@ -1,9 +1,10 @@
 class ArtifactsController < ApplicationController
 
+  before_action :find_user
   before_action :find_artifact, only: [:show, :edit, :update]
 
   def index
-    @artifacts = current_user.artifacts
+    @artifacts = @user.artifacts
   end
 
   def new
@@ -33,10 +34,14 @@ class ArtifactsController < ApplicationController
 
   private
 
-  def find_artifact
-    @artifact = current_user.artifacts.find_by!(slug: params[:slug])
+  def find_user
+    @user = User.find_by!(username: params[:username])
   end
   
+  def find_artifact
+    @artifact = @user.artifacts.find_by!(slug: params[:slug])
+  end
+
   def artifact_params
     params.require(:artifact).permit(:name, :content)
   end

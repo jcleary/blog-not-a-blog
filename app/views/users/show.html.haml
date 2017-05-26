@@ -1,1 +1,6 @@
-= render partial: '/users/banner', locals: { user: @user }
+= render partial: 'banner', locals: { user: @user }
+.container
+  .row
+    - puts @user.inspect
+    = #render 'add_content' if can? :update, @user
+    = render 'add_content' if signed_in? && current_user.id == @user.id

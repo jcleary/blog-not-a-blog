@@ -19,5 +19,4 @@ class User < ApplicationRecord
   has_many :collections, dependent: :destroy
   has_many :artifacts, dependent: :destroy
 
-  validates :username, presence: true
 end
