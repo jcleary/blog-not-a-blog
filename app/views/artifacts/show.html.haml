@@ -13,4 +13,8 @@
   .row
     .col-md-12
       != @artifact.content
+  - if can? :edit, @artifact
+    .row
+      .col-md-12
+        = link_to 'Edit', edit_user_artifact_path(current_user, @artifact), class: 'btn btn-default pull-right'
 

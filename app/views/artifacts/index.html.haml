@@ -8,7 +8,7 @@
     - @artifacts.each do |artifact| 
       .col-md-4
         .well.well-sm.artifact-thumb
-          = link_to artifact.name, edit_user_artifact_path(current_user, artifact)
+          = link_to artifact.name, short_user_artifact_path(current_user, artifact)
           %hr
           %p Collections: 3
           %p 

@@ -1,4 +1,4 @@
-= bootstrap_form_for [:user, @artifact] do |f|
+= bootstrap_form_for [current_user, @artifact] do |f|
   = f.text_field :name
   = f.cktext_area :content
   %br
