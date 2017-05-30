@@ -31,6 +31,10 @@ body {
   }
 }
 
+.artifacts-panel, .collections-panel {
+  min-height: 180px;
+}
+
 .artifact {
   h1 {
     text-align: center;
